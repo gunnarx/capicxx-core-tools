@@ -23,7 +23,7 @@ spec_html: docgendir
 		-a cppstr=cpp \
 		-a tabsize=4 \
 		-o $(htmldocgendir)/CommonAPICppSpecification.html \
-		CommonAPICppSpecification
+		CommonAPICppSpecification.asciidoc
 
 spec_pdf: docgendir
 	mkdir -p $(pdfdocgendir)
@@ -38,7 +38,7 @@ spec_pdf: docgendir
 		--dblatex-opts "-P latex.output.revhistory=0" \
 		--icons \
 		-D $(pdfdocgendir) \
-		CommonAPICppSpecification
+		CommonAPICppSpecification.asciidoc
 
 ug_html: docgendir
 	mkdir -p $(htmldocgendir)
@@ -51,7 +51,7 @@ ug_html: docgendir
 				-a tabsize=4 \
 				-b html \
 				-o $(htmldocgendir)/CommonAPICppUserGuide.html \
-				CommonAPICppUserGuide
+				CommonAPICppUserGuide.asciidoc
 
 ug_pdf: docgendir
 	mkdir -p $(pdfdocgendir)
@@ -66,7 +66,7 @@ ug_pdf: docgendir
 		--dblatex-opts "-P latex.output.revhistory=0 -P imagedata.default.scale=maxwidth=10cm,maxheight=8cm" \
 		--icons \
 		-D $(pdfdocgendir) \
-		CommonAPICppUserGuide
+		CommonAPICppUserGuide.asciidoc
 
 test_html: docgendir
 	mkdir -p $(htmldocgendir)/tests
